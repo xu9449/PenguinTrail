@@ -15,10 +15,19 @@ var commentRoutes 	= require("./routes/comments"),
 	trailRoutes 	= require("./routes/trails"),
 	indexRoutes		= require("./routes/index")
 
+require('dotenv').config();
+
 mongoose.set('useFindAndModify', false);
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
-mongoose.connect("mongodb://localhost/penguin_trail");
+mongoose.connect("mongodb+srv://"+process.env.MONGODB_USERNAME+":"+process.env.MONGODB_PASSWORD+"@penguintrail-bbxuu.mongodb.net/test?retryWrites=true&w=majority", {
+	useNewUrlParser: true,
+	useCreateIndex: true
+}).then(() => {
+	console.log('Connected to DB!')
+}).catch(err => {
+	console.log('ERROR' + err.message);	
+});
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");	

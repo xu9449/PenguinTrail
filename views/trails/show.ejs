@@ -25,9 +25,7 @@
 					<% if(currentUser && trail.author.id.equals(currentUser._id)){ %>
 					<a class = "btn btn-xs btn-warning" href ="/trails/<%= trail._id %>/edit">Edit</a>
 					<form id = "delete-form"action="/trails/<%= trail._id %>?_method=DELETE" method = "POST">
-						<button class = "btn btn-xs btn-danger">
-							Delete
-						</button>
+						<button class = "btn btn-xs btn-danger">Delete</button>
 					</form>
 					<% } %>
 				</div>
