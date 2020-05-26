@@ -10,13 +10,13 @@ var express 		= require("express"),
 	Comment     	= require("./models/comment"),
 	User        	= require("./models/user"),
 	seedDB  		= require("./seed")
+
 //requiring routes
 var commentRoutes 	= require("./routes/comments"),
 	trailRoutes 	= require("./routes/trails"),
 	indexRoutes		= require("./routes/index")
 
 require('dotenv').config();
-
 mongoose.set('useFindAndModify', false);
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
@@ -34,9 +34,6 @@ app.set("view engine", "ejs");
 app.use(flash());
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
-
-//seedDB();
-//seed the database
 
 // PASSPORT CONFIGURATION
 app.use(require("express-session")({
