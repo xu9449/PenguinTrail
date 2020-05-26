@@ -16,7 +16,7 @@ var commentRoutes 	= require("./routes/comments"),
 	indexRoutes		= require("./routes/index")
 
 require('dotenv').config();
-console.log(process.env);
+
 mongoose.set('useFindAndModify', false);
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
