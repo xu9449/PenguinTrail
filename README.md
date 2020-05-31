@@ -6,5 +6,8 @@ Go to: https://penguintrail-v01.herokuapp.com/
 
 ## Clone or download this repository
 ```
-git clone
+git clone https://github.com/xu9449/PenguinTrail.git
 ```
+### Install dependencies
+``` npm install
+
