@@ -9,5 +9,6 @@ Go to: https://penguintrail-v01.herokuapp.com/
 git clone https://github.com/xu9449/PenguinTrail.git
 ```
 ### Install dependencies
-``` npm install
-
+``` 
+npm install
+```
